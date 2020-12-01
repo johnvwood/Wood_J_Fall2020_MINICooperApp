@@ -1,0 +1,93 @@
+.hidden {
+  display: none;
+}
+
+html {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  color: #032703;
+}
+
+.app {
+  max-width: 700px;
+  margin: auto;
+}
+
+.projDiv {
+  margin: auto;
+}
+.projDiv p {
+  padding: 0px 6px 0px;
+}
+.projDiv p:nth-child(3) {
+  margin-bottom: 50px;
+}
+
+.projPic {
+  height: 100px;
+  margin-bottom: 40px;
+}
+
+.projName {
+  padding: 6px;
+  background-color: darkslategrey;
+  max-width: 100%;
+  font-style: italic;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 300ms;
+}
+.projName:hover {
+  background-color: #1fac2b;
+}
+
+.vueContainer {
+  margin: auto;
+}
+
+.vueHeader {
+  background-color: darkslategray;
+  color: white;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.attackButton {
+  padding: 4px 10px;
+  margin: 6px;
+  color: white;
+  background-color: #3b1515;
+  border: 2px solid red;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 300ms;
+  text-decoration: none;
+}
+.attackButton:hover {
+  background-color: red;
+  margin: 0px;
+  padding: 10px 16px;
+  border-radius: 0px;
+}
+
+.fruitList {
+  margin: 10px 0px 40px 0px;
+}
+
+.toggleText {
+  display: none;
+}
+
+.toggleTextV {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */
