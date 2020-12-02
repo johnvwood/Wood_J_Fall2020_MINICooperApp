@@ -1,92 +1,108 @@
 html {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-body {
+    font-family: "MINI Serif";
     background-color: white;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    color: rgb(3, 39, 3);
+    min-width: 360px;
 }
 
-.app {
-    max-width: 700px;
-    margin: auto;
+p {
+    color: rgb(27, 27, 27);
+    font-size: 14px;
+    line-height: 17px;
 }
 
-.projDiv {   
-    margin: auto;
-    p {
-        // shorthand padding is clockwise starting w top
-        //if only 3 values, it assumes the middle is for left and right
-        padding: 0px 6px 0px;
-        // counts include every child in the parent
-        &:nth-child(3){
-            margin-bottom: 50px;
+h2 {
+    font-size: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 28px;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    .navLogo {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.videoBox {
+    width: 100%;
+    margin-top: 48px;
+    //height: calc(var(width) * 0.5625);
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.carListBox {
+    position: relative;
+    top: -28px;
+    width: 100%;
+    background-color: white;
+    padding: 16px 0 0;
+    .carListHeader{
+        margin: 0 16px 20px;
+        text-align: left;
+        color: black;
+    }
+    .carList {
+        margin: auto;
+        height: 50px;
+        max-width: 670px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        .carIcon {
+            height: 100%;
+            width: auto;
+            cursor: pointer;
         }
     }
 }
 
-.projPic {
-    height: 100px;
-    margin-bottom: 40px;
-}
-
-.projName {
-    padding: 6px;
-    background-color:darkslategrey;
-    max-width: 100%;
-    font-style: italic;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 300ms;
-    //use & sign for subdefining in sass elements
-    &:hover {
-        background-color: rgb(31, 172, 43);
-    }
-}
-
-.vueContainer {
+.dynInfoBox {
+    padding: 12px 16px 0px;
     margin: auto;
-}
-
-.vueHeader {
-    background-color:darkslategray;
-    color: white;
-    padding: 6px;
-    cursor: pointer;
-}
-
-.attackButton {
-    padding: 4px 10px;
-    margin: 6px;
-    color: white;
-    background-color: rgb(59, 21, 21);
-    border: 2px solid red;
-    border-radius: 50px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 300ms;
-    text-decoration: none;
-    &:hover {
-        background-color: red;
-        margin: 0px;
-        padding: 10px 16px;
-        border-radius: 0px;
+    .dynPic {
+        width: 100%;
+        max-width: 400px;
+        margin: 0px auto 20px;
+        display: flex;
+        align-self: center;
+    }
+    .dynHeaderBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 0px 14px;
+        .dynName {
+            width: 50%;;
+            text-align: left;
+            color: black;
+        }
+        .dynPrice {
+            width: 50%;;
+            text-align: right;
+            color: black;
+        }
+    }
+    .dynDesc {
+        margin: 0px 0px 22px;
     }
 }
 
-.fruitList{
-    margin: 10px 0px 40px 0px;
+.divider {
+    max-width: 100%;
+    margin: auto;
+    height: 1px;
+    background-color: rgb(27, 27, 27);
 }
 
-// the style that is default
-.toggleText {
-    display: none;
-}
-// the style that is toggled
-.toggleTextV {
-    display: block;
+.footbar {
+    height: 20px;
+    padding: 16px;
 }
