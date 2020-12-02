@@ -2,56 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINI App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>MINI App | Home</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="#">    
+    <link rel="icon" href="images/favicon.ico">
+    <link href="//db.onlinewebfonts.com/c/6e881302ecb7d578520a1ca7d6a214c4?family=MINI+Serif" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/8596a172173e3bf6bf5daba5f15fb488?family=MINI+Serif" rel="stylesheet" type="text/css"/>   
 </head>
 <body>
     <h1 class="hidden">Mini Cooper App</h1>
-    <header class="navbar"></header>
-
-
+    <header class="navbar">
+        <img class="navLogo" src="images/minilogo.png" alt="MINI Cooper Logo">
+        <div class="navBlank"></div>
+    </header>
 
     <main class="app">
-        <!-- Vue Content -->
-        <section class="vueContainer">
-            <h2 class="vueHeader">{{ text1 }}</h2>
-            <p class="vueP">{{ text2 }}</p>
-            <!-- Apply showText style when showTextData is true -->
-            <p class="toggleText" :class="{'toggleTextV' : toggleP}">
-                This text toggles when you attack a character.
-            </p>
-            <ul class="vueList">
-                <!-- "v-for" is a Vue "for loop" to display every type of the data -->
-                <!-- 'item' and 'for' are keywords -->
-                <li class="fruitList" v-for="item in fruitArray" >
-                    <p @click="fruitClicked">{{item.name}}, {{item.type}}, {{item.trait}}, {{item.ability}}</p>
-                    <!-- :class makes Vue bind a class -->
-                    <a href="#" class="attackButton" @click.prevent="attackFruit(item)" :class="{'attackButton' : removeAformat }">Attack {{item.name}}</a>
-                </li>
-            </ul>
+        <div class="videoBox">
+            <video :src="'images/'+carCurrent.video+'.mp4'" autoplay="" type="mp4"></video>
+        </div>
+        
+        <section class="carListBox">
+            <h2 class="carListHeader">MEET THE FAMILY.</h2>
+            <li class="carList">
+                <img class="carIcon" v-for="car in carData" :src="'images/'+car.picSide+'.png'" @click="carClicked(car)" :alt="'Picuture of'+car.name">
+            </li>
         </section>
 
-        <!-- this is where the template data goes -->
-        <section class="projDynamic"></section>
+        <section class="dynInfoBox">
+            <img class="dynPic" :src="'images/'+carCurrent.pic+'.png'" alt="'Picuture of'+carCurrent.name">
+            <div class="dynHeaderBox">
+                <h2 class="dynName">{{carCurrent.name}}</h2>
+                <h2 class="dynPrice">{{carCurrent.price}}</h2>
+            </div>
+            <p class="dynDesc">{{carCurrent.info}}</p>
+            <div class="divider"></div>
+        </section>
     </main>
 
-    <!--templates go below footer, they dont get rendered-->
-    <!--this template is used to clone data into the visible html-->
-    <template class="projTemplate">
-        <div class="projDiv">
-            <h2 class="projName"></h2>
-            <p class="projType"></p>
-            <p class="projDesc"></p>
-            <img class="projPic" src="" alt="project pic">
-        </div>
-    </template>
-
+    
+    <footer class="footbar">
+        <p>© johnvwood 2020</p>
+    </footer>
 </body>
 <!--type is module and .js link always at bottom of html tag-->
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script type="module" src="js/main.js"></script>
-
-<script type="module" src="js/vueLocal.js"></script>
 </html>

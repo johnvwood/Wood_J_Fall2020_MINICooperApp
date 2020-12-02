@@ -7,8 +7,6 @@
 
     $dsn = 'mysql:'.http_build_query($db_dsn, '', ';');
 
-    //This is the DB credentials
-
     $db_user = 'root';
     $db_pass = '';
 
@@ -19,7 +17,3 @@
         echo 'Connection Error:'.$exception->getMessage();
         exit();
     }
-
-//when making a database always select "utf8_general_ci"
-// make primary key ID with Auto-Increment
-// add one extra column for ID

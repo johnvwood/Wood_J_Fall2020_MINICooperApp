@@ -1,4 +1,83 @@
 //used to define styles when the website window changes sizes
 //example: when changing from mobile to iPad size
 
-//first, 768px, then 1024px
+//first, 360px-mobile-768px-Ipad-1200px-HD-
+
+@media(min-width: 768px ){
+
+    .navbar {
+        height: 38px;
+    }
+
+    .videoBox {
+        margin-top: 0px;
+    }
+
+    .carList {
+        height: 130px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    .dynInfoBox {
+        padding: 12px 50px 0px;
+        .dynPic {
+            max-width: 500px;
+        }
+        .dynHeaderBox {
+            margin: 60px 0px 30px;
+        }
+    }
+
+    .footbar {
+    p {
+        padding: 20px 34px 0;
+    }
+    height: 46px;
+    }
+}
+
+@media(min-width: 1200px ){
+    .navbar {
+        height: 46px;
+    }
+    .videoBox {
+        margin-top: -30px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+
+    .dynInfoBox {
+        max-width: 720px;
+        margin-top:-200px;
+        .dynPic {
+            max-width: 600px;
+        }
+    }
+
+    .carListBox {
+        position: relative;
+        top: -200px;
+        height: 200px;
+    }
+
+    .footbar {
+        p{
+            padding: 20px 0 0;
+        }
+        height: 46px;
+    }
+}

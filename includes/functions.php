@@ -1,12 +1,8 @@
 <?php
-    //server side
-    // php import statement
-    //include("connect.php"); //commented out bc of index.php
-
+    // defines the functions used in the index.php file
     $result = [];
 
-    //these functions are for index.php
-    function getAllProj($conn) {
+    function getAll($conn) {
         $query = "SELECT * FROM tbl_minicars";
 
         $runQuery = $conn->query($query);
@@ -18,15 +14,14 @@
         echo(json_encode($result));
     }
 
-    function getSingleProj($conn, $ID) {
-        $query = "SELECT * FROM tbl_minicars WHERE ID=" . $ID . "";
+    function getSingle($conn, $id) {
+        $query = "SELECT * FROM tbl_minicars WHERE id=" . $id . "";
 
         $runQuery = $conn->query($query);
 
         while($row = $runQuery->fetchAll(PDO::FETCH_ASSOC)) {
             $result[] = $row;
         }
-       
         echo(json_encode($result));
     }
     

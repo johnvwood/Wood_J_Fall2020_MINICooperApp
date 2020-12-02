@@ -1,0 +1,29 @@
+Mini App Dev Process/Steps and Final Goals
+
+Goals
+	-	Have an app that has 5 different car types presented that can be clicked on to display information in a dynamic box below the row of car pictures
+	-	The app will have a black/white/grey colour scheme that aligns with the MINI style guide
+	-	The dynamic content will extend to the vehicle line’s specific promo video
+	-	Incorporate Vue methods and events
+	-	Content is Async/Ajax loaded
+	-	MOBILE FIRST
+	-	GitHub Repo with a couple working branches (des/dev)
+Steps
+	-	Set up basic project template + assets
+	-	Gather data from Mini.ca for the cars with promo videos
+		o	Car Name
+		o	Car Price
+		o	“ Info
+		o	“ Pic
+		o	“ Promo vid/gif
+	-	Gather pictures and other reference-type assets, sort them too
+	-	Create database then table in PHPMyAdmin 
+		o	6 columns (above(5) + ID)
+		o	Pictures in /images folder have same name in table
+	-	Authenticate and connect database to HTML with a PHP file
+	-	Arrange the array data in main.js
+	-	Set up a “for loop” for the car pictures above the info box
+	-	Get the info to display on the app
+	-	SCSS styling and divide the portions into sub-modules
+	-	Validate code for formatting errors etc.
+	-	Format for iPad width, then finally Desktop
