@@ -31,4 +31,4 @@ Built with Microsoft Visual Studio Code
 
 Tested on Windows 10 with Mozilla Firefox 83.0 on Local WAMP
 
-### Author: John Wood (j_wood112035@fanshaweonline.ca)
+### Author: John Wood (woodjoh783@gmail.com)
